@@ -3,72 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON para CSV Converter | Online e Grátis</title>
+    <title>JSON para CSV Converter | Online Grátis</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: #0f172a;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
         h1 {
             color: #3b82f6;
+            font-size: 2.5em;
             margin-bottom: 20px;
-        }
-        .btn {
-            background: #3b82f6;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 10px;
-        }
-        .btn:hover {
-            background: #2563eb;
         }
         .success {
             color: #10b981;
+            font-size: 1.2em;
             font-weight: bold;
-            margin-top: 20px;
+            margin: 20px 0;
+        }
+        .btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .status {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid #10b981;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        .url {
+            color: #60a5fa;
+            word-break: break-all;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>✅ JSON para CSV Converter</h1>
+        <h1>🎉 JSON para CSV Converter</h1>
+        <p class="success">✅ Site publicado com sucesso!</p>
         <p>Ferramenta online gratuita para desenvolvedores</p>
         
         <div style="margin: 30px 0;">
-            <button class="btn" onclick="teste()">Testar Botão</button>
-            <button class="btn" onclick="alert('Formulário funcionará aqui!')">Testar Formulário</button>
+            <button class="btn" onclick="alert('🎉 JavaScript funcionando!')">Testar JavaScript</button>
+            <button class="btn" onclick="document.getElementById('demo').innerHTML='✅ Funcionou!'">Testar DOM</button>
         </div>
         
-        <p class="success">Site funcionando perfeitamente!</p>
-        <p>Pronto para receber o conversor completo em instantes.</p>
+        <div id="demo" style="min-height: 30px; margin: 20px 0;"></div>
         
-        <div style="margin-top: 30px; padding: 15px; background: #10b98120; border-radius: 8px;">
+        <div class="status">
             <p><strong>Status:</strong> GitHub Pages ✅ ONLINE</p>
-            <p><strong>URL:</strong> https://48cork.github.io/json-converter/</p>
+            <p><strong>URL:</strong></p>
+            <p class="url">https://48cork.github.io/json-converter/</p>
         </div>
+        
+        <p style="margin-top: 30px; color: #94a3b8;">
+            Pronto para receber o conversor completo!
+        </p>
     </div>
 
     <script>
-        function teste() {
-            document.querySelector('.success').innerHTML = '🎉 Botão funcionando! JavaScript ativo!';
-        }
+        console.log('✅ Site carregado com sucesso!');
+        console.log('URL:', window.location.href);
         
-        console.log('Site carregado com sucesso!');
+        // Teste automático
+        setTimeout(() => {
+            document.getElementById('demo').innerHTML = '⏱️ Site carregado há 3 segundos';
+        }, 3000);
     </script>
 </body>
 </html>
